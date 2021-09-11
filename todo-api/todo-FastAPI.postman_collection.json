@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "861786ab-92eb-4af9-94f0-dd8750fbd4d9",
+		"name": "todo-FastAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"code\",\n    \"description\":\"do some conding\",\n    \"title\":\"code todo\",\n    \"complete\":false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/create",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create todo Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"code\",\n    \"description\":\"do some conding\",\n    \"title\":\"code todo\",\n    \"complete\":false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/create",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get a single todo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/todo/2eTRrjnxXvVF6pPB6Q6wZH",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todo",
+						"2eTRrjnxXvVF6pPB6Q6wZH"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update todo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"updated\",\n    \"name\": \"updated todo\",\n    \"description\": \"doing todo\",\n    \"complete\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/update/2eTRrjnxXvVF6pPB6Q6wZH",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"update",
+						"2eTRrjnxXvVF6pPB6Q6wZH"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "replace todo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n    \"_id\": \"E4iJCfjV7VDDNkSQ2oZJoJ\",\n    \"title\": \"todo2\",\n    \"body\":{\"name\": \"rise\",\n    \"description\": \"wake up\",\n    \"complete\": false\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/replace",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"replace"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a todo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/delete/gNjBFcqp8CgQcDMjNxu2zL",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"delete",
+						"gNjBFcqp8CgQcDMjNxu2zL"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete many",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/delete_many/todo4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"delete_many",
+						"todo4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create many",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/create_many",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"create_many"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:8000"
+		}
+	]
+}
